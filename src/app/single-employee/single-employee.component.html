@@ -1,0 +1,18 @@
+<h2>Employee details :</h2>
+<div class="container">
+<div class="row">
+  <div class="col-xs-12">
+    <h4>Votre Nom est : {{ employee.lastName }}</h4>
+    <input type="text" class="form-control" [(ngModel)]="employee.lastName">
+    <h4>Votre Prénom est : {{ employee.firstName }}</h4>
+    <input type="text" class="form-control" [(ngModel)]="employee.firstName">
+    <h4>Votre Adresse mail est : {{ employee.email }}</h4>
+    <input type="text" class="form-control" [(ngModel)]="employee.email">
+
+    <button class="btn btn-default"
+            (click)="onModifyAndBack()" style="margin-top: 15px;">Change and return</button>
+    <div class="alert alert-danger" role="alert" *ngIf="VerifyEmailExist"> This email is already exist !
+  </div>
+</div>
+</div>
+
